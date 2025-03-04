@@ -36,30 +36,21 @@ object UseCases {
     }
 
     fun validationEmail(email: String): Boolean {
-        if (email.length == 0)
-            return false
+        if (email.isEmpty()) return false
 
-        val a = email.split("@")
-        if (a.size < 2)
-            return false
+        val splitSub = email.split("@")
+        if (splitSub.size < 2) return false
 
-        if (!a[0].all { it.isLowerCase() || it.isDigit() || it == '.' })
-            return false
+        if (!splitSub[0].all { it.isLowerCase() || it.isDigit() || it == '.' }) return false
 
-        val b = a[1].split(".")
-        if (b.size < 2)
-            return false
-
-        if (b[1].length < 2)
-            return false
+        val splitDom = splitSub[1].split(".")
+        if (splitDom.size < 2) return false
+        if (splitDom[1].length < 2) return false
 
         return true
     }
 
     fun validationPassword(password: String): Boolean {
-        if (password.length == 0)
-            return false
-        else
-            return true
+        return password.isNotEmpty()
     }
 }
