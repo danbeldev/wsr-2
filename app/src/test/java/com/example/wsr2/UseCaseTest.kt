@@ -22,7 +22,7 @@ class UseCaseTest {
 
     @Test
     fun successRequest() = runBlocking {
-        assertTrue(UseCases.requestLogin("test@bk.ru", null, "123"))
+        assertTrue(UseCases.requestLogin("dan.bel.wsr@bk.ru", null, "ggtt1234"))
     }
 
     @Test
