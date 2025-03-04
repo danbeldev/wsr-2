@@ -1,4 +1,4 @@
-package com.example.wsr2.ui.theme
+package com.example.wsr2.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
